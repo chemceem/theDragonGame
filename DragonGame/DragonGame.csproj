@@ -65,11 +65,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\Black_Dragon.png" />
+    <Content Include="assets\images\dragonright.png" />
+    <Content Include="assets\images\villager%28female%29.png" />
+    <Content Include="css\main.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="index.html" />
+    <Content Include="js\impress.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

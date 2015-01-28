@@ -1,15 +1,15 @@
-﻿body {
-background: #b5bdc8;
-background: -moz-radial-gradient(center, ellipse cover,  #b5bdc8 0, #828c95 36%, #28343b 100%);
-background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0,#b5bdc8), color-stop(36%,#828c95), color-stop(100%,#28343b));
-background: -webkit-radial-gradient(center, ellipse cover,  #b5bdc8 0,#828c95 36%,#28343b 100%);
-background: -o-radial-gradient(center, ellipse cover,  #b5bdc8 0,#828c95 36%,#28343b 100%);
-background: -ms-radial-gradient(center, ellipse cover,  #b5bdc8 0,#828c95 36%,#28343b 100%);
-background: radial-gradient(ellipse at center,  #b5bdc8 0,#828c95 36%,#28343b 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b',GradientType=1 );
+﻿body {  
+background: #000000;
+background: -moz-radial-gradient(center, ellipse cover,  #000000 0, #000000 36%, #000000 100%);
+background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0,#000000), color-stop(36%,#000000), color-stop(100%,#000000));
+background: -webkit-radial-gradient(center, ellipse cover,  #b5bdc8 0,#000000 36%,#000000 100%);
+background: -o-radial-gradient(center, ellipse cover,  #b5bdc8 0,#b5bdc8 36%,#b5bdc8 100%);
+background: -ms-radial-gradient(center, ellipse cover,  #000000 0,#000000 36%,#000000 100%);
+background: radial-gradient(ellipse at center,  #000000 0,#000000 36%,#000000 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=1 );
 }
 
-/* styling for slides that are inactive */
+/* styling for slides that are inactive b5bdc8 */
 .impress-enabled .step {
     margin: 0;
     opacity: 0.0;
@@ -29,8 +29,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
 /* styling for all slides */
 .slide {
     display: block;
-    width: 700px;
-    height: 600px;
+    width: 1366px;
+    height: 768px;
     padding: 40px 60px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, .3);
@@ -66,6 +66,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
 .slide .slide-text {
         height: 450px;
     }
+
+.backgroundimage {
+    background: url('../assets/images/whiterun.jpg') no-repeat;
+    background-size:100%;
+}
+
+.backgroundimageindex {
+    background: url('../assets/images/index.jpg') no-repeat;
+    background-size:100%;
+}
+
+.villager {
+    background-color: black;
+    background: url('../assets/images/villager.jpg') no-repeat;
+    background-size:100%;
+}
 
 /* styling for menu section of each slide */
 div.menu {

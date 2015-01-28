@@ -8,45 +8,48 @@
 </head>
 <body>
     <div id="impress">
-        <div id="intro" class="step slide">
+        <div id="intro" class="step slide backgroundimageindex">
             <div class="slide-text">
-                <p>The town of Winterfell has been attacked by a dragon.</p>
-                <p>The high seeks your help in slaying the fierce creature.</p>
+                <p>You are on a planet full of dragons. In front of you,</p>
+                <p>you see two caves. In one cave, the dragon is friendly</p>
                 <p>and will share his treasure with you. The other dragon</p>
                 <p>is greedy and hungry, and will eat you on sight.</p>
                 <br />
                 <p>Which cave do you go into?</p>
-                <p><a href="#cave1">CAVE 1</a></p>
+                <p><a href="#whiterun">CAVE 1</a></p>
                 <p>or</p>
-                <p><a href="#cave2">CAVE 2</a></p>
+                <p><a href="#villager">CAVE 2</a></p>
             </div>
         </div>
 
-        <div id="cave1" class="step slide" data-x="1500">
-            <div class="slide-text">
-                <p>You approach the cave, it is dark and spooky.</p>
-                <p>A large red dragon jumps out in front of you!</p>
-                <p>He opens his jaws and...</p>
+        <div id="whiterun" class="step slide backgroundimage" data-x="0" data-y="0" data-scale="4" >
+            <div class="slide-text ">
+                <p>The town of WhiteRun has been attacked by a dragon.</p>
+                <p>The mayor seeks your help in slaying the fierce creature.</p>
+                <p>Will you take up the challenge and slay the dragon and save the town ??</p>
+                <p></p>
                 <br />
-                <p>Gobbles you down with one bite!</p>
-            </div>
-            <div class="menu">
-                <a href="#intro">START OVER</a>
+                <p>Which cave do you go into?</p>
+                <p><a href="#villager">Talk to the villager</a></p>
+                <p><a href="#intro">Go to the mountain</a></p>
+
             </div>
         </div>
-
-        <div id="cave2" class="step slide" data-x="-1500">
+        <div id="villager" class="step slide villager" data-x="-1500">
             <div class="slide-text">
-                <p>You approach the cave, it is bright and cheerful.</p>
-                <p>A large white dragon approaches you...</p>
-                <p>And gives you his treasure.</p>
-            </div>
-            <div class="menu">
-                <a href="#intro">START OVER</a>
+                <p>you have seen the villager</p>
+                <p><a href="#intro">Start over</a></p>
+                <p><a href="#fight">Fight</a></p>
             </div>
         </div>
+        <div id="fight" class="step slide" data-x="-1500">
+            <div class="slide-text">
+                <canvas id="gameframe" style="cursor:crosshair"></canvas>          1
+            </div>
+      
+        </div>
+   </div>
 
-    </div>
 
     <!-- JavaScript Section -->
     <script src="js/impress.js"></script>

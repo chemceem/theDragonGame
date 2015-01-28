@@ -19,11 +19,11 @@ $(document).ready(function () {
     bgimage.src = "assets/images/darkcaves.jpg";
 
     var duck = new Image();
-    duck.src = "duck.png";
+    //duck.src = "duck.png";
 
     function render() {
         ctx.drawImage(bgimage, 0, 0);
-        ctx.drawImage(duck, w, 100, 75, 110);
+        //ctx.drawImage(duck, w, 100, 75, 110);
     }
 
     function init() {
@@ -33,52 +33,52 @@ $(document).ready(function () {
     init();
     
     //function to check if the duck has been shot
-    canvas.addEventListener('click', function (event) {
-        var row = Math.floor((event.pageY - canvas.offsetTop) / 50);
-        var col = Math.floor((event.pageX - canvas.offsetLeft) / 50);
+    //canvas.addEventListener('click', function (event) {
+    //    var row = Math.floor((event.pageY - canvas.offsetTop) / 50);
+    //    var col = Math.floor((event.pageX - canvas.offsetLeft) / 50);
 
-        if ((col == pos.x) && (row == pos.y)) {
-            paint();
-            score += 1;
-            duration = duration - 100;
-            $("#score").text(score);
-            clearInterval(setInt);
-            init();
-        }
-    }, false);
+    //    if ((col == pos.x) && (row == pos.y)) {
+    //        paint();
+    //        score += 1;
+    //        duration = duration - 100;
+    //        $("#score").text(score);
+    //        clearInterval(setInt);
+    //        init();
+    //    }
+    //}, false);
 
-    //to find random position for the duck
-    function newPosition() {
-        pos = {
-            x: Math.round(Math.random() * (w - cellwidth) / cellwidth),
-            y: Math.round(Math.random() * (h - cellwidth) / cellwidth),
-        };  
-    }
+    ////to find random position for the duck
+    //function newPosition() {
+    //    pos = {
+    //        x: Math.round(Math.random() * (w - cellwidth) / cellwidth),
+    //        y: Math.round(Math.random() * (h - cellwidth) / cellwidth),
+    //    };  
+    //}
 
-    //move the duck to a new position
-    function paint() {
-        img1 = document.getElementById("lake");
-        ctx.drawImage(bgimage, 0, 0);
-        ctx.strokeRect(0, 0, w, h);
-        newPosition();
-        ctx.drawImage(duck, pos.x * cellwidth, pos.y * cellwidth, 40, 64);
-    }
+    ////move the duck to a new position
+    //function paint() {
+    //    img1 = document.getElementById("lake");
+    //    ctx.drawImage(bgimage, 0, 0);
+    //    ctx.strokeRect(0, 0, w, h);
+    //    newPosition();
+    //    ctx.drawImage(duck, pos.x * cellwidth, pos.y * cellwidth, 40, 64);
+    //}
 
-    //to reset speed of the duck
-    $("#speedReset").click(function () {
-        clearInterval(setInt);
-        duration = 2000;
-        init();
-    });
+    ////to reset speed of the duck
+    //$("#speedReset").click(function () {
+    //    clearInterval(setInt);
+    //    duration = 2000;
+    //    init();
+    //});
 
-    //to reset score
-    $("#scoreReset").click(function () {
-        score = 0;
-        $("#score").text(score);
-        clearInterval(setInt);
-        duration = 2000;
-        init();
-    });
+    ////to reset score
+    //$("#scoreReset").click(function () {
+    //    score = 0;
+    //    $("#score").text(score);
+    //    clearInterval(setInt);
+    //    duration = 2000;
+    //    init();
+    //});
 
     render();
 

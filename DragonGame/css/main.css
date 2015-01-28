@@ -83,6 +83,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     background-size:100%;
 }
 
+.cave {
+    background: url('../assets/images/darkcaves.jpg') no-repeat;
+    background-size:100%;
+}
+
+.dragonattack {
+    background: url('../assets/images/dragonattack.jpg') no-repeat;
+    background-size:100%;
+}
+
 /* styling for menu section of each slide */
 div.menu {
     border-top: 2px solid black;

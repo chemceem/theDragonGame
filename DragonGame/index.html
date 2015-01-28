@@ -10,29 +10,25 @@
     <div id="impress">
         <div id="intro" class="step slide backgroundimageindex">
             <div class="slide-text">
-                <p>You are on a planet full of dragons. In front of you,</p>
-                <p>you see two caves. In one cave, the dragon is friendly</p>
-                <p>and will share his treasure with you. The other dragon</p>
-                <p>is greedy and hungry, and will eat you on sight.</p>
-                <br />
-                <p>Which cave do you go into?</p>
-                <p><a href="#whiterun">CAVE 1</a></p>
-                <p>or</p>
-                <p><a href="#villager">CAVE 2</a></p>
+               
+                <p><a href="#whiterun">Start the game</a></p>
+    
             </div>
         </div>
 
-        <div id="whiterun" class="step slide backgroundimage" data-x="0" data-y="0" data-scale="4" >
+        <div id="whiterun" class="step slide backgroundimage" data-x="1500" >
             <div class="slide-text ">
                 <p>The town of WhiteRun has been attacked by a dragon.</p>
                 <p>The mayor seeks your help in slaying the fierce creature.</p>
                 <p>Will you take up the challenge and slay the dragon and save the town ??</p>
-                <p></p>
-                <br />
-                <p>Which cave do you go into?</p>
+                <p><a href="#attack">Continue</a></p>
+
+            </div>
+        </div>
+        <div id="attack" class="step slide dragonattack" data-x="1500">
+            <div class="slide-text">
                 <p><a href="#villager">Talk to the villager</a></p>
                 <p><a href="#intro">Go to the mountain</a></p>
-
             </div>
         </div>
         <div id="villager" class="step slide villager" data-x="-1500">
@@ -42,12 +38,13 @@
                 <p><a href="#fight">Fight</a></p>
             </div>
         </div>
-        <div id="fight" class="step slide" data-x="-1500">
+        <div id="fight" class="step slide cave" data-x="-1500">
             <div class="slide-text">
-                <canvas id="gameframe" style="cursor:crosshair"></canvas>          1
+                <canvas id="gameframe" width="1280" height="720"></canvas>
+                <p><a href="#intro">Back to main page</a></p>
             </div>
-      
         </div>
+
    </div>
 
 

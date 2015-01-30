@@ -1,7 +1,5 @@
-﻿/// <reference path="jquery-1.11.2.min.js" />
-
-var jqscript = document.createElement('script');
-jqscript.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
+﻿var jqscript = document.createElement('script');
+jqscript.src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
 //jqscript.src = "/js/jquery-1.11.2.min.js";
 jqscript.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(jqscript);

@@ -84,7 +84,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 }
 
 .cave {
-    background: url('../assets/images/darkcaves.jpg') no-repeat;
+    /*background: url('../assets/images/darkcaves.jpg') no-repeat;*/
+    background-color : black;
     background-size:100%;
 }
 
@@ -95,6 +96,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 
 .mayormeet {
     background: url('../assets/images/mayor.jpg') no-repeat;
+    background-size:100%;
+}
+
+.route1 {
+    background: url('../assets/images/intothemountain.jpg') no-repeat;
     background-size:100%;
 }
 

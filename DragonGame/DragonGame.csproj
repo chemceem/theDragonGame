@@ -68,8 +68,10 @@
     <Content Include="assets\images\Black_Dragon.png" />
     <Content Include="assets\images\darkcaves.jpg" />
     <Content Include="assets\images\dragonattack.jpg" />
+    <Content Include="assets\images\dragonfire.png" />
     <Content Include="assets\images\dragonright.png" />
     <Content Include="assets\images\index.jpg" />
+    <Content Include="assets\images\intothemountain.jpg" />
     <Content Include="assets\images\mayor.jpg" />
     <Content Include="assets\images\villager%28female%29.png" />
     <Content Include="assets\images\villager.jpg" />

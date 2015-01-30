@@ -5,18 +5,20 @@
     <title>The Dragon!</title>
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <script src="js/game.js"></script>
 </head>
 <body>
     <div id="impress">
         <div id="intro" class="step slide backgroundimageindex">
+            <!-- Intro page. Title of the game-->
             <div class="slide-text">
-               
                 <p><a href="#whiterun">Start the game</a></p>
-    
+
             </div>
         </div>
 
-        <div id="whiterun" class="step slide backgroundimage" data-x="1500" >
+        <!--Briefly explains the situation to the user-->
+        <div id="whiterun" class="step slide backgroundimage" data-x="1500">
             <div class="slide-text ">
                 <p>The town of WhiteRun has been attacked by a dragon.</p>
                 <p>The mayor seeks your help in slaying the fierce creature.</p>
@@ -25,31 +27,42 @@
 
             </div>
         </div>
+
+        <!-- Another slide that shows dragon attacking the village. Can go talk to the villager or visit the king-->
         <div id="attack" class="step slide dragonattack" data-x="1500">
             <div class="slide-text">
                 <p><a href="#villager">Talk to the villager</a></p>
-                <p><a href="#intro">Go to the mountain</a></p>
+                <p><a href="#mayor">Visit the Mayor of the Town</a></p>
             </div>
         </div>
-        <div id="villager" class="step slide villager" data-x="-1500">
+
+        <div id="mayor" class="step slide mayormeet" data-x="-1500" data-y="1500">
+            <div class="slide-text">
+                <p>The king announces the reward for slaying the dragon.</p>
+                <p><a href="#attack">Go back to the village</a></p>
+                <p><a href="#route1">Start for the mountain</a></p>
+            </div>
+        </div>
+        <div id="villager" class="step slide villager" data-x="-1500" data-y="1500">
             <div class="slide-text">
                 <p>you have seen the villager</p>
                 <p><a href="#intro">Start over</a></p>
                 <p><a href="#fight">Fight</a></p>
             </div>
         </div>
-        <div id="fight" class="step slide cave" data-x="-1500">
+        <div id="fight" class="step slide cave" data-x="-1500" data-y="1500">
             <div class="slide-text">
                 <canvas id="gameframe" width="1280" height="720"></canvas>
                 <p><a href="#intro">Back to main page</a></p>
             </div>
         </div>
 
-   </div>
+    </div>
 
 
     <!-- JavaScript Section -->
     <script src="js/impress.js"></script>
+    
     <script>impress().init();</script>
 
 </body>

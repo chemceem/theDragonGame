@@ -93,6 +93,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     background-size:100%;
 }
 
+.mayormeet {
+    background: url('../assets/images/mayor.jpg') no-repeat;
+    background-size:100%;
+}
+
 /* styling for menu section of each slide */
 div.menu {
     border-top: 2px solid black;

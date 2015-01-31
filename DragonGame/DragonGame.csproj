@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="assets\images\Black_Dragon.png" />
     <Content Include="assets\images\darkcaves.jpg" />
+    <Content Include="assets\images\deaddragon.jpg" />
     <Content Include="assets\images\dragonattack.jpg" />
     <Content Include="assets\images\dragonfire.png" />
     <Content Include="assets\images\dragonright.png" />

@@ -1,6 +1,17 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--
+        The dragon game.
+        Small game using impressjs that follows a linear story line. 
+        Assignment 1
+        Web game development
+        Name : Chemcee M Cherian
+        Student NO : 300793352
+        Version : 1.0
+        last modified by : chemcee
+        last modified on : 30th January 2015
+        -->
     <meta charset="utf-8" />
     <title>The Dragon!</title>
     <link href="css/reset.css" rel="stylesheet" />
@@ -50,7 +61,7 @@
                 <p><a href="#mayor">Visit the Mayor of the Town</a></p>
             </div>
         </div>
-
+        <!-- This div shows the discussion between alduin and the mayor of the town.-->
         <div id="mayor" class="step slide mayormeet" data-x="-1500" data-y="1500">
             <div class="slide-text">
                 <p style="color:white;">
@@ -62,6 +73,8 @@
                 <p><a href="#route1">Start for the mountain</a></p>
             </div>
         </div>
+
+        <!--Alduin starts his journey to the mountains throught the forest.-->
         <div id="route1" class="step slide route1" data-x="-1500" data-y="1500">
             <div class="slide-text">
                 <p style="color:white;">
@@ -70,29 +83,35 @@
                 <p><a href="#fight">Continue along the road.</a></p>
             </div>
         </div>
+        <!--The villager talks with alduin.-->
         <div id="villager" class="step slide villager" data-x="1500" data-y="1500">
             <div class="slide-text">
-                <p style="color:white;">Alduin met with the merchant and asked for details. The merchane explained everything he witness with horror in his eyes.</p>
+                <p style="color:white;">Alduin met with the merchant and asked for details. The merchant explained everything he witness with horror in his eyes.</p>
 
-                <p><a href="#fight">Fight</a></p>
+                <p><a href="#fight">Travel into the mountains</a></p>
             </div>
         </div>
-        <div id="fight" class="step slide cave" data-x="1500" data-y="1500">
+
+        <!-- Here the player fights the dragon. The dragon is displayed on the canvas element.
+            Additional javascript was required for this part of the game..-->
+        <div id="fight" class="step slide cave" data-x="-1500" data-y="1500">
             <div class="slide-text">
                 <p style="color:white;">Click on the dragon as fast as you can to kill him!!</p>
                 <canvas id="gameframe" width="1366" height="768"></canvas>
             </div>
         </div>
-        <div id="success" class="step slide cave" data-x="1500" data-y="1500">
+        <!-- Shows the image of the defeated dragon with the option for alduin to return to whiterun-->
+        <div id="success" class="step slide cave2" data-x="1500" data-y="1500">
             <div class="slide-text">
                 <p style="color: white">Alduin has killed the dragon and ended took his revenge.</p>
                 <p><a href="#return">Return to whiterun</a></p>
             </div>
         </div>
+        <!--The final slide of the game. Shows the town of whiterun at night.-->
         <div id="return" class="step slide returnwhiterun" data-x="1500" data-y="-1500">
             <div class="slide-text">
                 <p style="color:white;">The town rejoiced. You were given the name dragonSlayer.</p>
-                <p><a href="#intro">Start Ove</a></p>
+                <p><a href="#intro">Start Over</a></p>
             </div>
         </div>
 
@@ -102,6 +121,10 @@
     <!-- JavaScript Section -->
     <script src="js/impress.js"></script>
     <script>impress().init();</script>
+
+    <!-- This scipt is used to display the dragon at different positions in the canvas.
+        This is the final level in the game.
+        Date modified 29th January 2015-->
     <script>
         (function () {
             var canvas = jQuery("#gameframe")[0];
@@ -132,26 +155,17 @@
 
             //function to check if the dragon has been shot
             canvas.addEventListener('click', function (event) {
-                
+
                 var row = Math.floor((event.pageY - canvas.offsetTop) / 50);
                 var col = Math.floor((event.pageX - canvas.offsetLeft) / 50);
-                console.log(" score : ");
+                console.log(" score : " + score);
+                score += 1;
 
+                if (score > 20) {
+                    window.location.href = "#success";
+                }
+                paint();
 
-                //if(score.value>20)
-                //{
-                //    window.location.href = "#success";
-                //}
-                //if (((col >= (pos.x+10)) && (row >= pos.y+10)) || (col <= pos.x-10) && (row>= pos.y-10))
-                //{
-                //    paint();
-                //    score += 1;
-                //    duration = duration - 100;
-                //    $("#score").text(score);
-
-                //    clearInterval(setInt);
-                //    init();
-                //}
             }, false);
 
             ////to find random position for the dragon
@@ -177,6 +191,10 @@
     </script>
 
 </body>
+
+
+
+
 
 
 

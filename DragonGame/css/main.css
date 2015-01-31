@@ -103,7 +103,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
     background: url('../assets/images/intothemountain.jpg') no-repeat;
     background-size:100%;
 }
-
+.returnwhiterun {
+    background: url('../assets/images/whiterunreturn.jpg')no-repeat;
+    background-size:100%;
+}
 /* styling for menu section of each slide */
 div.menu {
     border-top: 2px solid black;

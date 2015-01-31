@@ -76,6 +76,7 @@
     <Content Include="assets\images\villager%28female%29.png" />
     <Content Include="assets\images\villager.jpg" />
     <Content Include="assets\images\whiterun.jpg" />
+    <Content Include="assets\images\whiterunreturn.jpg" />
     <Content Include="css\main.css" />
     <Content Include="css\reset.css" />
     <Content Include="index.html" />

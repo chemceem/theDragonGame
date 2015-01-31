@@ -20,10 +20,14 @@
         <!--Briefly explains the situation to the user-->
         <div id="whiterun" class="step slide backgroundimage" data-x="1500">
             <div class="slide-text ">
-                <p>The town of WhiteRun has been attacked by a dragon.</p>
-                <p>The mayor seeks your help in slaying the fierce creature.</p>
-                <p>Will you take up the challenge and slay the dragon and save the town ??</p>
-                <p><a href="#attack">Continue</a></p>
+                <p>
+                    Whiterun is a simple town in the Province of Skyrim.People lead a traditional life and rooted in ancient traditions.
+                    The town is surrounded by snowy mountains on all the sides. Legend has it that a fierce dragon resides in the mountains which attacked the town centuries ago
+                    and the then King and the soldiers fought well and drove the dragon away into the mountains.
+                </p>
+                <p>Centuries have the dragon waited seeking revenge and now that the people have forgotten about him and his powers, the time has come.</p>
+
+                <p style="align-content:center;"><a href="#attack" style="align:center">Continue</a></p>
 
             </div>
         </div>
@@ -31,6 +35,17 @@
         <!-- Another slide that shows dragon attacking the village. Can go talk to the villager or visit the king-->
         <div id="attack" class="step slide dragonattack" data-x="1500">
             <div class="slide-text">
+                <p style="color: white;">
+                    Alduin awakes to the screams of people shouting in the streets. He wondered why. He felt an unusual warmth in his room.Curious as he was, he opened his
+                    windows and stared outside. What he saw was shocking. It was flames everywhere. Each and every household was burning.
+                </p>
+                <p style="color: white;">
+                    Suddenly he was taken away by the loud roar. He eyes searched for the origin of the roar. It was then he saw the dragon for the first time.An endless
+                    revenge took over him. He wanted to destroy the ferocious creature.
+                </p>
+                <p style="color:white;">
+                    He grabbed the sword from his chest, put on his armour and walked outside the door. The dragon was gone back by then.The roar still haunted him.
+                </p>
                 <p><a href="#villager">Talk to the villager</a></p>
                 <p><a href="#mayor">Visit the Mayor of the Town</a></p>
             </div>
@@ -38,34 +53,46 @@
 
         <div id="mayor" class="step slide mayormeet" data-x="-1500" data-y="1500">
             <div class="slide-text">
-                <p>The king announces the reward for slaying the dragon.</p>
+                <p style="color:white;">
+                    Alduin set for the castle. He wanted to meet the mayor and devise plans to kill the dragon. The mayor was devastated by the attack. He announced a reward of 5000xp
+                    for anyone who slays the dragon.
+                </p>
+                <p style="color:white;">Alduin went to barracks and upgraded his armour and grabbed another steel sword.</p>
                 <p><a href="#attack">Go back to the village</a></p>
                 <p><a href="#route1">Start for the mountain</a></p>
             </div>
         </div>
         <div id="route1" class="step slide route1" data-x="-1500" data-y="1500">
             <div class="slide-text">
-                <p>Continue along the road.</p>
+                <p style="color:white;">
+                    Alduin ventured into the mountains through the thick forest. He had only one mission in his mind. To kill the dragon. He made sure that only one would return alive from the mountain.
+                </p>
                 <p><a href="#fight">Continue along the road.</a></p>
             </div>
         </div>
         <div id="villager" class="step slide villager" data-x="1500" data-y="1500">
             <div class="slide-text">
-                <p>you have seen the villager</p>
-                <p><a href="#intro">Start over</a></p>
+                <p style="color:white;">Alduin met with the merchant and asked for details. The merchane explained everything he witness with horror in his eyes.</p>
+
                 <p><a href="#fight">Fight</a></p>
             </div>
         </div>
         <div id="fight" class="step slide cave" data-x="1500" data-y="1500">
             <div class="slide-text">
+                <p style="color:white;">Click on the dragon as fast as you can to kill him!!</p>
                 <canvas id="gameframe" width="1366" height="768"></canvas>
-                <p><a href="#intro">Back to main page</a></p>
             </div>
         </div>
         <div id="success" class="step slide cave" data-x="1500" data-y="1500">
             <div class="slide-text">
-                <p style="color: white">Hello world</p>
-                <p><a href="#intro">Start Over</a></p>
+                <p style="color: white">Alduin has killed the dragon and ended took his revenge.</p>
+                <p><a href="#return">Return to whiterun</a></p>
+            </div>
+        </div>
+        <div id="return" class="step slide returnwhiterun" data-x="1500" data-y="-1500">
+            <div class="slide-text">
+                <p style="color:white;">The town rejoiced. You were given the name dragonSlayer.</p>
+                <p><a href="#intro">Start Ove</a></p>
             </div>
         </div>
 
@@ -82,7 +109,7 @@
             var w = jQuery("#gameframe").width();
             var h = jQuery("#gameframe").height();
             var position = { x: 0, y: 0 };
-            var duration = 5000;
+            var duration = 1000;
 
             var cellwidth = 50;
             var score = 0;
@@ -105,11 +132,17 @@
 
             //function to check if the dragon has been shot
             canvas.addEventListener('click', function (event) {
+                
                 var row = Math.floor((event.pageY - canvas.offsetTop) / 50);
                 var col = Math.floor((event.pageX - canvas.offsetLeft) / 50);
-                console.log(" score : " + score);
-                window.location.href = "#success";
-                //if (((col >= (pos.x+10)) && (row >= pos.y+10)) || (col <= pos.x-10) && (row>= pos.y-10)) 
+                console.log(" score : ");
+
+
+                //if(score.value>20)
+                //{
+                //    window.location.href = "#success";
+                //}
+                //if (((col >= (pos.x+10)) && (row >= pos.y+10)) || (col <= pos.x-10) && (row>= pos.y-10))
                 //{
                 //    paint();
                 //    score += 1;
@@ -121,7 +154,7 @@
                 //}
             }, false);
 
-            ////to find random position for the duck
+            ////to find random position for the dragon
             function newPosition() {
                 pos = {
                     x: Math.round(Math.random() * (w - cellwidth) / cellwidth),
@@ -129,14 +162,14 @@
                 };
             }
 
-            ////move the duck to a new position
+            ////move the dragon to a new position
             function paint() {
-                img1 = document.getElementById("lake");
+                console.log(" kill the dragon");
                 ctx.drawImage(bgimage, 0, 0);
                 ctx.strokeRect(0, 0, w, h);
                 newPosition();
-                
-                ctx.drawImage(dragon, pos.x * cellwidth, pos.y * cellwidth, 120, 144);
+
+                ctx.drawImage(dragon, pos.x * cellwidth, pos.y * cellwidth, 180, 214);
             }
 
             render();
@@ -144,4 +177,7 @@
     </script>
 
 </body>
+
+
+
 </html>
